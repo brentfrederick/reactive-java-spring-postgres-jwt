@@ -5,8 +5,7 @@
 Implementation of a Java and [Spring Reactive](https://spring.io/reactive) stateless backend with REST APIs, *which is
 fully non-blocking and supports reactive streams back pressure*. The service provides endpoints to create users,
 authenticate users, create/retrieve chat threads, and create/retrieve thread replies. Authentication and authorization
-provided via stateless JSON Web Tokens (JWT).
-The service deploys on the [Netty](https://netty.io/) NIO framework.
+provided via stateless JSON Web Tokens (JWT). The service deploys on the [Netty](https://netty.io/) NIO framework.
 
 This project uses the following technologies:
 
@@ -26,21 +25,21 @@ This project uses the following technologies:
 2. [PostgreSQL]("https://www.postgresql.org/")
 2. [Gradle]("https://gradle.org/install/")
 
-### Running the server
-
-To launch the server:
+### Run the server
 
 1. Generate RSA keys for signing and validating the JWTs: `./gradlew createKeys`
 2. Update [application-local.yml](src%2Fmain%2Fresources%2Fapplication-local.yml) to point to your local PostgreSQL
    database
 3. Start the server (port 8080): `./start.sh`
 
+### Query the server
+
 A Postman import file is included to test the API
 endpoints: [reactive-java-spring-postgres-jwt.postman_collection.json](reactive-java-spring-postgres-jwt.postman_collection.json)
 
 Be sure to update the Authorization tab on the User API with the response from the token endpoint.
 
-### Sample console output:
+## Sample console output
 
 Notably, the server starts in ~2 seconds on modest hardware.
 

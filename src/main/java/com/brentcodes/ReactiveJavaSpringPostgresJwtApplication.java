@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ReactiveJavaSpringPostgresApplication {
+public class ReactiveJavaSpringPostgresJwtApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ReactiveJavaSpringPostgresApplication.class, args);
+        SpringApplication.run(ReactiveJavaSpringPostgresJwtApplication.class, args);
     }
 }
