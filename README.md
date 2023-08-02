@@ -12,9 +12,10 @@ This project uses the following technologies:
 - [Spring WebFlux](https://docs.spring.io/spring-framework/reference/web/webflux.html) for reactive REST APIs
 - [Spring Security OAuth2 for Webflux](https://docs.spring.io/spring-security/reference/reactive/oauth2/index.html) for
   reactive JWT / OAuth2 Resource Server support
-- [Spring Data R2DBC](https://spring.io/projects/spring-data-r2dbc) for reactive database connectivity
-- [FlywayDB](https://flywaydb.org/) for Database migrations (uses JDBC)
-- [R2DBC](https://r2dbc.io/) Non-blocking PostgreSQL Driver
+- [Spring Data R2DBC](https://docs.spring.io/spring-data/r2dbc/docs/current/reference/html/) for reactive database
+  connectivity
+- [R2DBC](https://r2dbc.io/) Non-blocking PostgreSQL Driver (unlike JDBC which blocks!)
+- [FlywayDB](https://flywaydb.org/) for database migrations (uses JDBC)
 - [Netty](https://netty.io/) Asynchronous, event-driven network application framework
 
 ## Getting Started
