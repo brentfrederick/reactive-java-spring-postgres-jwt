@@ -23,8 +23,8 @@ This project uses the following technologies:
 ### Dependencies
 
 1. Java 19
-2. [PostgreSQL]("https://www.postgresql.org/")
-2. [Gradle]("https://gradle.org/install/")
+2. [PostgreSQL](https://www.postgresql.org/) ([Macos install](https://postgresapp.com/))
+2. [Gradle](https://gradle.org/install/)
 
 ### Run the server
 
