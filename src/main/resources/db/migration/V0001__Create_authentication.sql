@@ -10,7 +10,6 @@ CREATE TABLE users (
   account_non_locked boolean NOT NULL,
   account_non_expired boolean NOT NULL,
   credentials_non_expired boolean NOT NULL,
-  last_login timestamp with time zone,
   push_id varchar(255),
   brand varchar(255),
   build_id varchar(255),

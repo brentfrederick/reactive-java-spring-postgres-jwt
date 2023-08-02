@@ -8,7 +8,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.time.Instant;
 import java.util.Collection;
 import java.util.List;
 
@@ -23,7 +22,6 @@ public class Users extends BaseLockingEntity implements UserDetails {
     private boolean accountNonLocked;
     private boolean accountNonExpired;
     private boolean credentialsNonExpired;
-    private Instant lastLogin;
 
     // https://github.com/react-native-device-info/react-native-device-info#api
     @Size(max = 255)
@@ -68,18 +66,6 @@ public class Users extends BaseLockingEntity implements UserDetails {
     private String appBuildNumber;
 
     public Users() {
-    }
-
-    public Users(String username, String password, String uniqueId, String deviceToken) {
-        this.username = username;
-        this.password = password;
-        this.role = UserRole.USER;
-        this.enabled = true;
-        this.accountNonLocked = true;
-        this.accountNonExpired = true;
-        this.credentialsNonExpired = true;
-        this.uniqueId = uniqueId;
-        this.deviceToken = deviceToken;
     }
 
     public Users(String username, String password, String uniqueId, String pushId, String brand, String buildId,
@@ -172,14 +158,6 @@ public class Users extends BaseLockingEntity implements UserDetails {
 
     public void setCredentialsNonExpired(boolean credentialsNonExpired) {
         this.credentialsNonExpired = credentialsNonExpired;
-    }
-
-    public Instant getLastLogin() {
-        return lastLogin;
-    }
-
-    public void setLastLogin(Instant lastLogin) {
-        this.lastLogin = lastLogin;
     }
 
     public String getPushId() {
