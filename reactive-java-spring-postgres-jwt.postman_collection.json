@@ -1,0 +1,278 @@
+{
+  "info": {
+    "_postman_id": "18e7be60-f764-4987-aada-5955d9ab6f32",
+    "name": "Reactive Java Spring Postgres JWT",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "100401"
+  },
+  "item": [
+    {
+      "name": "App API",
+      "item": [
+        {
+          "name": "User Create",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"usernameTest\",\n  \"password\": \"passwordTest\",\n  \"uniqueId\": \"uniqueIdTest\",\n  \"pushId\": \"pushIdTest\",\n  \"brand\": \"brandTest\",\n  \"buildId\": \"buildIdTest\",\n  \"carrier\": \"carrierTest\",\n  \"deviceId\": \"deviceIdTest\",\n  \"deviceToken\": \"deviceTokenTest\",\n  \"manufacturer\": \"manufacturerTest\",\n  \"model\": \"modelTest\",\n  \"systemName\": \"systemNameTest\",\n  \"systemVersion\": \"systemVersionTest\",\n  \"appVersion\": \"appVersionTest\",\n  \"appBuildNumber\": \"appBuildNumberTest\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/rest/chat/user",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "rest",
+                "chat",
+                "user"
+              ],
+              "query": [
+                {
+                  "key": "redirect_uri",
+                  "value": null,
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Token",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"usernameTest\",\n  \"password\": \"passwordTest\",\n  \"client\": \"test\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/rest/chat/token",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "rest",
+                "chat",
+                "token"
+              ],
+              "query": [
+                {
+                  "key": "redirect_uri",
+                  "value": null,
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "User API",
+      "item": [
+        {
+          "name": "Conversation",
+          "item": [
+            {
+              "name": "Conversation for User",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/rest/chat/conversation",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "rest",
+                    "chat",
+                    "conversation"
+                  ],
+                  "query": [
+                    {
+                      "key": "redirect_uri",
+                      "value": null,
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Conversation Create",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"starter\": \"this is a test conversation starter\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/rest/chat/conversation",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "rest",
+                    "chat",
+                    "conversation"
+                  ],
+                  "query": [
+                    {
+                      "key": "redirect_uri",
+                      "value": null,
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Reply",
+          "item": [
+            {
+              "name": "Reply Create",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"reply\": \"example reply\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/rest/chat/reply/d346db80-3bf5-ea5d-f27d-c37d4e937bdf",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "rest",
+                    "chat",
+                    "reply",
+                    "d346db80-3bf5-ea5d-f27d-c37d4e937bdf"
+                  ],
+                  "query": [
+                    {
+                      "key": "redirect_uri",
+                      "value": null,
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Reply Get",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"reply\": \"zomg\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/rest/chat/reply/d346db80-3bf5-ea5d-f27d-c37d4e937bdf",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "rest",
+                    "chat",
+                    "reply",
+                    "d346db80-3bf5-ea5d-f27d-c37d4e937bdf"
+                  ],
+                  "query": [
+                    {
+                      "key": "redirect_uri",
+                      "value": null,
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ],
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "INSERT_REAL_TOKEN_HERE",
+            "type": "string"
+          }
+        ]
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

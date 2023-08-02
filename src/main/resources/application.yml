@@ -1,0 +1,27 @@
+#  Reference for all supported properties:
+#  https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080
+  main:
+    banner-mode: off
+  output:
+    ansi:
+      enabled: ALWAYS
+  profiles:
+    active: "${ACTIVE_PROFILE}"
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+async:
+  executor:
+    core-pool-size: 2
+    max-pool-size: 20
+    queue-capacity: 500
+    thread-name-prefix: "AsyncExecutor - "
+openai:
+  url: "https://api.openai.com/v1"
+

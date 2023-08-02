@@ -1,0 +1,18 @@
+#  Reference for all supported properties:
+#  https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html
+
+server:
+  port: 8080
+
+spring:
+  r2dbc:
+    username: postgres
+    password: postgres
+    url: "r2dbc:postgresql://localhost:5432/brentcodesdb"
+  flyway:
+    username: postgres
+    password: postgres
+    locations: classpath:db/migration
+    url: "jdbc:postgresql://localhost:5432/brentcodesdb"
+    clean-on-validation-error: true # must be set to `false` in production!
+    clean-disabled: false
